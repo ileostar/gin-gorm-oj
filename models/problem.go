@@ -10,9 +10,9 @@ type Problem struct {
 	Content    string `gorm:"column:content;type:text;" json:"Content"`                 //文章正文
 	MaxRuntime int    `gorm:"column:max_runtime;type:int"json:"max_runtime"`            //最大运行时间
 	MaxMem     int    `gorm:"column:max_mem;type:int"json:"max_mem"`                    //最大运行内存
-	
+
 }
 
-func (table Problem) Tablename() string {
+func (table *Problem) Tablename() string {
 	return "problem"
 }
